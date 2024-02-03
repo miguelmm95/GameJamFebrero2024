@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cce5de2ed688d844a2137033e54905f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToCompleteLevel: 30
+  timeToCompleteLevel: 10
   levelCompletePanel: {fileID: 0}
 --- !u!1001 &711576855
 PrefabInstance:
@@ -1031,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3207775522948715101, guid: dce1a7f6c1482d447a3e758f04d26494, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.05
+      value: 17.79
       objectReference: {fileID: 0}
     - target: {fileID: 3207775522948715101, guid: dce1a7f6c1482d447a3e758f04d26494, type: 3}
       propertyPath: m_LocalPosition.z
