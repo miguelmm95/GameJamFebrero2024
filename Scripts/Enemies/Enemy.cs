@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform targetDestination;
+    Transform targetDestination;
     GameObject targetGameObject;
     Player targetPlayer;
     [SerializeField] float speed;
@@ -18,13 +18,18 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        targetGameObject = targetDestination.gameObject;
     }
 
     private void FixedUpdate()
     {
         Vector3 direction = (targetDestination.position - transform.position).normalized;
         rb2d.velocity = direction * speed;
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        targetGameObject = target;
+        targetDestination = target.transform;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
