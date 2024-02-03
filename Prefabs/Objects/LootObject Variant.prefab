@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1607022257639025520, guid: b8f1a3cde1bfcff4cb3559dab759761f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7303795433524802639, guid: b8f1a3cde1bfcff4cb3559dab759761f, type: 3}
       propertyPath: m_Name
       value: LootObject Variant

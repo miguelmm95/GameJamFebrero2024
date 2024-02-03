@@ -16,4 +16,5 @@ MonoBehaviour:
   stats:
     damage: 10
     timeToAttack: 3
+    usageTime: 10
   weaponBasePrefab: {fileID: 8867068770976769976, guid: f3b2543eb6d477e4db343b16d7d945fe, type: 3}
