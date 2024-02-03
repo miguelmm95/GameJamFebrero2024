@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 706727945}
   - component: {fileID: 706727947}
   - component: {fileID: 706727948}
+  - component: {fileID: 706727949}
   m_Layer: 0
   m_Name: ----WORLD----
   m_TagString: Untagged
@@ -650,6 +651,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 6f6ea1e13b9d7bb49a668d039d598e0e, type: 2}
   enemiesManager: {fileID: 1260711737}
+--- !u!114 &706727949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706727944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cce5de2ed688d844a2137033e54905f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToCompleteLevel: 30
+  levelCompletePanel: {fileID: 0}
 --- !u!1001 &711576855
 PrefabInstance:
   m_ObjectHideFlags: 0
