@@ -509,6 +509,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDestination: {fileID: 361958781}
   speed: 0
+  hp: 20
+  baseDamage: 0
 --- !u!1 &361958779
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd60cf654aead34dbc34022700ddd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 100
+  currentHP: 100
 --- !u!1001 &469999276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1439,6 +1443,7 @@ MonoBehaviour:
   leftAttackObject: {fileID: 1541591634}
   rightAttackObject: {fileID: 1344216016}
   attackSize: {x: 4, y: 2}
+  whipDamage: 10
 --- !u!1 &951466364
 GameObject:
   m_ObjectHideFlags: 0

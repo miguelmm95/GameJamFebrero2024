@@ -7,9 +7,13 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] Transform targetDestination;
     GameObject targetGameObject;
+    Player targetPlayer;
     [SerializeField] float speed;
 
     Rigidbody2D rb2d;
+
+    [SerializeField] float hp;
+    [SerializeField] float baseDamage;
 
     private void Awake()
     {
@@ -33,6 +37,21 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        
+        if(targetPlayer == null)
+        {
+            targetPlayer = targetGameObject.GetComponent<Player>();
+        }
+
+        targetPlayer.TakeDamage(baseDamage);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
+
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

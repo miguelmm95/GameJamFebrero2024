@@ -13,6 +13,7 @@ public class TestWeapon : MonoBehaviour
 
     PlayerMovement playerMovement;
     [SerializeField] Vector2 attackSize = new Vector2(4f, 2f);
+    [SerializeField] float whipDamage = 10f;
 
     private void Awake()
     {
@@ -35,12 +36,14 @@ public class TestWeapon : MonoBehaviour
         if(playerMovement.lastHorizontalVector > 0)
         {
             rightAttackObject.SetActive(true);
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(leftAttackObject.transform.position, attackSize, 0f);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(rightAttackObject.transform.position, attackSize, 0f);
             ApplyDamage(colliders);
         }
         else
         {
             leftAttackObject.SetActive(true);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(leftAttackObject.transform.position, attackSize, 0f);
+            ApplyDamage(colliders);
         }
     }
 
@@ -48,7 +51,12 @@ public class TestWeapon : MonoBehaviour
     {
         for(int i = 0; i < colliders.Length; i++)
         {
-            Debug.Log(colliders[i].gameObject.name);
+            Enemy e = colliders[i].GetComponent<Enemy>();
+
+            if(e != null)
+            {
+                colliders[i].GetComponent<Enemy>().TakeDamage(whipDamage);
+            }
         }
     }
 }
