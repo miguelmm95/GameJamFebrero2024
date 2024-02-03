@@ -7,8 +7,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb2d;
-    Vector3 movementVector;
-    bool facingRight = true;
+    [HideInInspector]
+    public Vector3 movementVector;
+    [HideInInspector]
+    public float lastHorizontalVector;
+    [HideInInspector]
+    public float lastVerticalVector;
 
     AnimateController animate;
 
@@ -31,28 +35,19 @@ public class PlayerMovement : MonoBehaviour
         movementVector.x = Input.GetAxisRaw("Horizontal");
         movementVector.y = Input.GetAxisRaw("Vertical");
 
-        animate.horizontal = Input.GetAxisRaw("Horizontal");
+        animate.horizontal = movementVector.x;
 
-        if(animate.horizontal > 0 && !facingRight)
+        if (movementVector.x != 0)
         {
-            Flip();
+            lastHorizontalVector = movementVector.x;
         }
-        else if(animate.horizontal < 0 && facingRight)
+        if(movementVector.y != 0)
         {
-            Flip();
+            lastVerticalVector = movementVector.y;
         }
 
         movementVector *= speed;
 
         rb2d.velocity = movementVector;
-    }
-
-    private void Flip()
-    {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
-
-        facingRight = !facingRight;
     }
 }

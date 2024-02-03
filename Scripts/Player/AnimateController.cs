@@ -22,14 +22,14 @@ public class AnimateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //print(horizontal);
-        if(horizontal == 0)
+        if(horizontal != 0)
         {
-            animator.SetBool("isRunning", false);
+            animator.SetBool("isRunning", true);
+            animator.SetFloat("Horizontal", horizontal);
         }
         else
         {
-            animator.SetBool("isRunning", true);
+            animator.SetBool("isRunning", false);
         }
     }
 }
