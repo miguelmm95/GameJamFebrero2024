@@ -8,6 +8,13 @@ public class Player : MonoBehaviour
     public float currentHP = 100;
     [SerializeField] StatusBar hpBar;
 
+    [HideInInspector] public Level level;
+
+    private void Awake()
+    {
+        level = GetComponent<Level>();
+    }
+
     private void Start()
     {
         hpBar.SetState(currentHP, maxHP);
@@ -24,7 +31,7 @@ public class Player : MonoBehaviour
         hpBar.SetState(currentHP, maxHP);
     }
 
-    public void Heal(int amount)
+    public void Heal(float amount)
     {
         if (currentHP <= 0) { return; }
 

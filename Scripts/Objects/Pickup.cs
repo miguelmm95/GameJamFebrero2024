@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    [SerializeField] int healAmount;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,7 +11,7 @@ public class Pickup : MonoBehaviour
 
         if(p != null)
         {
-            p.Heal(healAmount);
+            GetComponent<IPickupObject>().OnPickUp(p);
             Destroy(gameObject);
         }
     }
