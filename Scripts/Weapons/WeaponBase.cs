@@ -10,16 +10,23 @@ public abstract class WeaponBase : MonoBehaviour
     public WeaponStats weaponStats;
 
     public float timeToAttack;
+    public float usageTime;
     float timer;
 
     public void Update()
     {
         timer -= Time.deltaTime;
+        usageTime -= Time.deltaTime;
 
         if(timer < 0)
         {
             Attack();
             timer = timeToAttack;
+        }
+
+        if(usageTime < 0)
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -27,8 +34,9 @@ public abstract class WeaponBase : MonoBehaviour
     {
         weaponData = wd;
         timeToAttack = weaponData.stats.timeToAttack;
+        usageTime = weaponData.stats.usageTime;
 
-        weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack);
+        weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack, wd.stats.usageTime);
     }
 
     public abstract void Attack();

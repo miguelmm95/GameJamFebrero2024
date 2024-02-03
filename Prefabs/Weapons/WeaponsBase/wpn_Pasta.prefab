@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 5002164698999554763}
   - component: {fileID: 980373504012103917}
   m_Layer: 0
-  m_Name: wpn_Whip
+  m_Name: wpn_Pasta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

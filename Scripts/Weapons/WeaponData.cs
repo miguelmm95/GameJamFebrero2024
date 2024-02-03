@@ -9,11 +9,13 @@ public class WeaponStats
 {
     public int damage;
     public float timeToAttack;
+    public float usageTime;
 
-    public WeaponStats(int damage, float timeToAttack)
+    public WeaponStats(int damage, float timeToAttack, float usageTime)
     {
         this.damage = damage;
         this.timeToAttack = timeToAttack;
+        this.usageTime = usageTime;
     }
 }
 
