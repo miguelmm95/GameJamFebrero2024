@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float maxHP = 100;
     public float currentHP = 100;
+    [SerializeField] StatusBar hpBar;
 
     public void TakeDamage(float damage)
     {
@@ -14,6 +15,19 @@ public class Player : MonoBehaviour
         if (currentHP <= 0)
         {
             Debug.Log("TEST");
+        }
+        hpBar.SetState(currentHP, maxHP);
+    }
+
+    public void Heal(int amount)
+    {
+        if (currentHP <= 0) { return; }
+
+        currentHP += amount;
+
+        if(currentHP > maxHP)
+        {
+            currentHP = maxHP;
         }
     }
 }
