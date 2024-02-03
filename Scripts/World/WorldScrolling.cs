@@ -87,11 +87,15 @@ public class WorldScrolling : MonoBehaviour
                 int tileToUpdate_Y = CalculatePositionOnAxis(playerTilePosition.y + pov_y, false);
 
                 GameObject tile = terranTiles[tileToUpdate_X, tileToUpdate_Y];
-                tile.transform.position = CalculateTilePosition(
+                Vector3 newPosition = CalculateTilePosition(
                     playerTilePosition.x + pov_x,
                     playerTilePosition.y + pov_y);
 
-                terranTiles[tileToUpdate_X, tileToUpdate_Y].GetComponent<TerrainTile>().Spawn();
+                if(newPosition != tile.transform.position)
+                {
+                    tile.transform.position = newPosition;
+                    terranTiles[tileToUpdate_X, tileToUpdate_Y].GetComponent<TerrainTile>().Spawn();
+                }
             }
         }
     }
