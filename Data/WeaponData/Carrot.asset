@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7391759f77f0304db85ec3599818057, type: 3}
-  m_Name: ThrowingKnife
+  m_Name: Carrot
   m_EditorClassIdentifier: 
-  Name: Throwing Knife
+  Name: Carrot
   stats:
     damage: 50
     timeToAttack: 1

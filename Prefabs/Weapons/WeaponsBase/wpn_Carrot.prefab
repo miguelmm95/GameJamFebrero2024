@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8262758447242692834}
   - component: {fileID: 2006110874849674219}
   m_Layer: 0
-  m_Name: wpn_ThrowingKnife
+  m_Name: wpn_Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd200d0feaa22942890e6ec0c582f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 7d31d23d23655084889bf39955748594, type: 2}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0
   timeToAttack: 1.5
   knifePrefab: {fileID: 7649539124276639286, guid: d9662d9bb4d9b6a49a38c99ead3a8939, type: 3}

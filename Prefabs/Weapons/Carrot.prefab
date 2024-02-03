@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1751774663161958271}
   - component: {fileID: 7225975193155383847}
   m_Layer: 0
-  m_Name: knife
+  m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d376fb50912dcf4f90c8d4d1a16316e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b6935cf7973b304195782c609529192, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
