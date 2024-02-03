@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] StatusBar hpBar;
 
     [HideInInspector] public Level level;
+    private bool isDead;
 
     private void Awake()
     {
@@ -22,11 +23,14 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (isDead) { return; }
+
         currentHP -= damage;
 
         if (currentHP <= 0)
         {
-            Debug.Log("TEST");
+            GetComponent<PlayerGameOver>().GameOver();
+            isDead = true;
         }
         hpBar.SetState(currentHP, maxHP);
     }
