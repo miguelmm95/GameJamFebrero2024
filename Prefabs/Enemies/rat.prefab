@@ -196,3 +196,4 @@ MonoBehaviour:
   speed: 2
   hp: 20
   baseDamage: 5
+  experience_reward: 100
