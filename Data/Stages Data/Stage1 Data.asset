@@ -14,14 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageEvents:
   - time: 5
-    message: This is 5 seconds message
+    message: ------
+    enemyToSpawn: {fileID: 5718582784408342024, guid: 630c6627c3232e94c82ba4097aa0c3d1, type: 3}
+    count: 2
+  - time: 10
+    message: ------
     enemyToSpawn: {fileID: 5718582784408342024, guid: 630c6627c3232e94c82ba4097aa0c3d1, type: 3}
     count: 5
-  - time: 10
-    message: This is 10 seconds message
+  - time: 15
+    message: ------
     enemyToSpawn: {fileID: 5718582784408342024, guid: 630c6627c3232e94c82ba4097aa0c3d1, type: 3}
     count: 10
-  - time: 15
-    message: This is 15 seconds message
+  - time: 30
+    message: ------
     enemyToSpawn: {fileID: 5718582784408342024, guid: 630c6627c3232e94c82ba4097aa0c3d1, type: 3}
     count: 15
+  - time: 50
+    message: ------
+    enemyToSpawn: {fileID: 5718582784408342024, guid: 630c6627c3232e94c82ba4097aa0c3d1, type: 3}
+    count: 20

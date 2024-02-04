@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rice
   stats:
-    damage: 0
-    timeToAttack: 0
-    usageTime: 0
-  weaponBasePrefab: {fileID: 0}
+    damage: 25
+    timeToAttack: 0.5
+    usageTime: 30
+  weaponBasePrefab: {fileID: 4723817334252916947, guid: 3bd94a3a2a1942b4a98cb39bc69d369c, type: 3}

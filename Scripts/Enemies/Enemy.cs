@@ -62,4 +62,9 @@ public class Enemy : MonoBehaviour, IDamageable
             Destroy(gameObject);
         }
     }
+
+    public void OnParticleCollision(GameObject other)
+    {
+        TakeDamage(10);
+    }
 }
