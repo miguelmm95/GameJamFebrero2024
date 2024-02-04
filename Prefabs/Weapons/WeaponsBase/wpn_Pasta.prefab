@@ -240,8 +240,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244623de48887f445a9a71ea783f7cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: c0e4a4a2583f6964f95ca0b99481e2a6, type: 2}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0
+    usageTime: 0
   timeToAttack: 1.5
+  usageTime: 0
   leftAttackObject: {fileID: 7655773080991652568}
   rightAttackObject: {fileID: 6664590005334042358}
   attackSize: {x: 4, y: 2}
-  whipDamage: 10

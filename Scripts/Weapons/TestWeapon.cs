@@ -16,20 +16,12 @@ public class TestWeapon : WeaponBase
         playerMovement = GetComponentInParent<PlayerMovement>();
     }
 
-    private void ApplyDamage(Collider2D[] colliders)
+    public override void Attack()
     {
-        for(int i = 0; i < colliders.Length; i++)
-        {
-            IDamageable e = colliders[i].GetComponent<IDamageable>();
-
-            if(e != null)
-            {
-                e.TakeDamage(weaponStats.damage);
-            }
-        }
+        StartCoroutine(AttackProcess());
     }
 
-    public override void Attack()
+    IEnumerator AttackProcess()
     {
         if (playerMovement.lastHorizontalVector > 0)
         {
@@ -43,5 +35,6 @@ public class TestWeapon : WeaponBase
             Collider2D[] colliders = Physics2D.OverlapBoxAll(leftAttackObject.transform.position, attackSize, 0f);
             ApplyDamage(colliders);
         }
+        yield return new WaitForSeconds(0.3f);
     }
 }
