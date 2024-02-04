@@ -8,13 +8,13 @@ public class TestWeapon : WeaponBase
     [SerializeField] GameObject leftAttackObject;
     [SerializeField] GameObject rightAttackObject;
 
-    PlayerMovement playerMovement;
+    //PlayerMovement playerMovement;
     [SerializeField] Vector2 attackSize = new Vector2(4f, 2f);
 
-    private void Awake()
-    {
-        playerMovement = GetComponentInParent<PlayerMovement>();
-    }
+    //private void Awake()
+    //{
+    //    playerMovement = GetComponentInParent<PlayerMovement>();
+    //}
 
     public override void Attack()
     {
@@ -23,7 +23,7 @@ public class TestWeapon : WeaponBase
 
     IEnumerator AttackProcess()
     {
-        if (playerMovement.lastHorizontalVector > 0)
+        if (playerMovement.lastHorizontalDeCoupleVector > 0)
         {
             rightAttackObject.SetActive(true);
             Collider2D[] colliders = Physics2D.OverlapBoxAll(rightAttackObject.transform.position, attackSize, 0f);

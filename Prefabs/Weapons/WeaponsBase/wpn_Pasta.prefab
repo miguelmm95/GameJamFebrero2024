@@ -245,8 +245,11 @@ MonoBehaviour:
     damage: 0
     timeToAttack: 0
     usageTime: 0
+  playerMovement: {fileID: 0}
   timeToAttack: 1.5
   usageTime: 0
+  vectorOfAttack: {x: 0, y: 0}
+  attackDirection: 2
   leftAttackObject: {fileID: 7655773080991652568}
   rightAttackObject: {fileID: 6664590005334042358}
   attackSize: {x: 4, y: 2}

@@ -3,15 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DirectionOfAttack
+{
+    None,
+    Forward,
+    LeftRight,
+    UpDown
+}
+
 public abstract class WeaponBase : MonoBehaviour
 {
     public WeaponData weaponData;
-
     public WeaponStats weaponStats;
+    public PlayerMovement playerMovement;
 
     public float timeToAttack;
     public float usageTime;
     float timer;
+
+    public Vector2 vectorOfAttack;
+    [SerializeField] DirectionOfAttack attackDirection;
+
+    private void Awake()
+    {
+        playerMovement = GetComponentInParent<PlayerMovement>();
+    }
 
     public void Update()
     {
@@ -59,5 +75,31 @@ public abstract class WeaponBase : MonoBehaviour
                 e.TakeDamage(weaponStats.damage);
             }
         }
+    }
+
+    public void UpdateVectorOfAttack()
+    {
+        if(attackDirection == DirectionOfAttack.None)
+        {
+            vectorOfAttack = Vector2.zero;
+            return;
+        }
+
+        switch (attackDirection)
+        {
+            case DirectionOfAttack.Forward:
+                vectorOfAttack.x = playerMovement.lastHorizontalCoupleVector;
+                vectorOfAttack.y = playerMovement.lastVerticalCoupledVector;
+                break;
+            case DirectionOfAttack.LeftRight:
+                vectorOfAttack.x = playerMovement.lastHorizontalDeCoupleVector;
+                vectorOfAttack.y = 0f;
+                break;
+            case DirectionOfAttack.UpDown:
+                vectorOfAttack.x = 0f;
+                vectorOfAttack.y = playerMovement.lastVerticalDeCoupledVector;
+                break;
+        }
+        vectorOfAttack = vectorOfAttack.normalized;
     }
 }

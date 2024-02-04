@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3378466755127089685
+--- !u!1 &4723817334252916947
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8262758447242692834}
-  - component: {fileID: 2006110874849674219}
+  - component: {fileID: 2363605807177406113}
+  - component: {fileID: 6816071742031016683}
   m_Layer: 0
-  m_Name: wpn_Carrot
+  m_Name: wpn_Rice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8262758447242692834
+--- !u!4 &2363605807177406113
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3378466755127089685}
+  m_GameObject: {fileID: 4723817334252916947}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2006110874849674219
+--- !u!114 &6816071742031016683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3378466755127089685}
+  m_GameObject: {fileID: 4723817334252916947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd200d0feaa22942890e6ec0c582f37, type: 3}
+  m_Script: {fileID: 11500000, guid: 1492e5169d6d1c642aa7a48926c145bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 7d31d23d23655084889bf39955748594, type: 2}
+  weaponData: {fileID: 11400000, guid: 4a8b38ca18f07174f92bfedf68a0374b, type: 2}
   weaponStats:
     damage: 0
     timeToAttack: 0
     usageTime: 0
   playerMovement: {fileID: 0}
-  timeToAttack: 1.5
+  timeToAttack: 0
   usageTime: 0
   vectorOfAttack: {x: 0, y: 0}
-  attackDirection: 2
-  knifePrefab: {fileID: 7649539124276639286, guid: d9662d9bb4d9b6a49a38c99ead3a8939, type: 3}
+  attackDirection: 1
+  ricePrefab: {fileID: 44823536780634430, guid: a19129988df5e92499be40d1bae9c896, type: 3}
